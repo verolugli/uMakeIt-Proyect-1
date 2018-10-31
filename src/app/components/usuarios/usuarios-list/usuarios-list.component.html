@@ -1,0 +1,22 @@
+<div class="body">
+  <div class="card-body">
+    <h6 class="text-center">Lista de Usuarios</h6>
+    <table class="table table-sm table-hover">
+      <tbody>
+        <tr *ngFor = "let usuario of usuarioList">
+          <td>{{usuario.name}}</td>
+          <td>{{usuario.password}}</td>
+          <td>{{usuario.address}}</td>
+          <td>{{usuario.phone}}</td>
+          <a class="btn btn-secondary text-white" (click)="onEdit(product)">
+              <i class="far far-edit"></i></a>
+            <a class="btn btn-danger text-white" (click)="onDelete(product.$key)">
+              <i class="fas fa-trash-alt"></i>
+            </a>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
